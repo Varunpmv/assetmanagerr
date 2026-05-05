@@ -1,0 +1,6 @@
+name,type,department,criticality,owner_email,renewal_cycle,renewal_date,data_classification
+GitHub Enterprise,Software,Engineering,High,admin@riskcovry.com,Yearly,2026-05-01,Confidential
+AWS Production,Cloud,Engineering,High,admin@riskcovry.com,Monthly,2026-04-30,Confidential
+Notion Corporate,Software,Product,Medium,admin@riskcovry.com,Yearly,2026-12-15,Internal
+Gmail Workspace,Software,Operations,Medium,admin@riskcovry.com,Yearly,2026-08-01,Internal
+Test Asset,Other,IT,Low,admin@riskcovry.com,Monthly,2026-04-25,Public

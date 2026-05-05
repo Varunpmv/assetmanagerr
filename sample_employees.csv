@@ -1,0 +1,6 @@
+name,email,department,designation,system_role
+Alice Johnson,alice@riskcovry.com,Engineering,Senior Developer,user
+Bob Smith,bob@riskcovry.com,Product,Product Manager,reviewer
+Charlie Case,charlie@riskcovry.com,Operations,Ops Lead,approver
+David Miller,david@riskcovry.com,Sales,Account Executive,user
+Eve Wright,eve@riskcovry.com,Engineering,DevOps Engineer,user
