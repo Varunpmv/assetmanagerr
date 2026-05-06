@@ -13,7 +13,10 @@ module.exports = (sequelize) => {
     exit_date: { type: DataTypes.DATEONLY },
     password: { type: DataTypes.STRING, allowNull: false },
     requires_password_change: { type: DataTypes.BOOLEAN, defaultValue: true },
-    notification_preferences: { type: DataTypes.JSON, defaultValue: { email: true, slack: true, inApp: true } }
+    notification_preferences: { 
+      type: DataTypes.JSON, 
+      defaultValue: { email: true, slack: true, inApp: true } 
+    }
   }, { sequelize, modelName: 'User' });
   return User;
 };
