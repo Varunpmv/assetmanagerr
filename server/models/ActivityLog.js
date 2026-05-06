@@ -1,7 +1,7 @@
 const { DataTypes } = require('sequelize');
 
 module.exports = (sequelize) => {
-  const Notification = sequelize.define('Notification', {
+  const ActivityLog = sequelize.define('ActivityLog', {
     id: {
       type: DataTypes.UUID,
       defaultValue: DataTypes.UUIDV4,
@@ -9,31 +9,33 @@ module.exports = (sequelize) => {
     },
     user_id: {
       type: DataTypes.UUID,
-      allowNull: false,
+      allowNull: true,
     },
-    type: {
-      type: DataTypes.ENUM('INFO', 'WARNING', 'SUCCESS', 'DANGER'),
-      defaultValue: 'INFO',
-    },
-    title: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    message: {
-      type: DataTypes.TEXT,
-      allowNull: false,
-    },
-    link: {
+    user_name: {
       type: DataTypes.STRING,
       allowNull: true,
     },
-    is_read: {
-      type: DataTypes.BOOLEAN,
-      defaultValue: false,
+    action: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    entity_type: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    entity_id: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    details: {
+      type: DataTypes.JSON,
+      defaultValue: {},
+    },
+    ip_address: {
+      type: DataTypes.STRING,
+      allowNull: true,
     }
-  }, {
-    tableName: 'Notifications',
   });
 
-  return Notification;
+  return ActivityLog;
 };
