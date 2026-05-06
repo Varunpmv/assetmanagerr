@@ -238,7 +238,7 @@ const Login = () => {
         <div className="login-card">
           <div className="logo-section">
             <div className="logo-container">
-              <img src="/riskcovry-logo.png" alt="Riskcovry Logo" className="logo-img" />
+              <img src="/riskcovry-logo.svg" alt="Riskcovry Logo" className="logo-img" />
             </div>
             <div className="app-name">
               <span>Riskcovry</span> Asset Manager
