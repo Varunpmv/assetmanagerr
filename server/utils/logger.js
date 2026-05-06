@@ -1,15 +1,14 @@
 const { ActivityLog } = require('../models');
 
-/**
- * Utility to log user activities for the Audit Trail.
- */
-const logActivity = async (req, action, targetType, targetId = null, details = {}) => {
+const logActivity = async (req, action, entityType, entityId = null, details = {}) => {
   try {
+    const user = req.user || {};
     await ActivityLog.create({
-      user_id: req.user?.id || null,
+      user_id: user.id || null,
+      user_name: user.name || 'System',
       action,
-      target_type: targetType,
-      target_id: String(targetId),
+      entity_type: entityType,
+      entity_id: String(entityId),
       details,
       ip_address: req.ip || req.connection.remoteAddress,
     });
